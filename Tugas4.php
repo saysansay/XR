@@ -2,7 +2,7 @@
 function createSalt()
 {
     $text = md5(uniqid(rand(), TRUE));
-    return substr($text, 0, 3);
+    return substr($text, 0, 16);
 }
 function createSHA256($password,$salt){
     return hash('sha256',$salt.$password);
